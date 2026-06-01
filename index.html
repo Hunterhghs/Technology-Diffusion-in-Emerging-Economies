@@ -7,7 +7,7 @@
     <meta name="description" content="An in-depth analysis of how technologies spread across emerging economies — drivers, barriers, regional dynamics, and policy implications.">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Playfair+Display:wght@700;800;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,300;0,8..60,400;0,8..60,600;0,8..60,700;1,8..60,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.7/dist/chart.umd.min.js"></script>
     <link rel="stylesheet" href="styles.css">
 </head>
@@ -16,17 +16,7 @@
 <!-- Navigation -->
 <nav class="navbar" id="navbar">
     <div class="nav-container">
-        <a href="#" class="nav-logo">
-            <span class="logo-icon">
-                <svg width="28" height="28" viewBox="0 0 28 28" fill="none">
-                    <circle cx="14" cy="14" r="12" stroke="currentColor" stroke-width="1.5"/>
-                    <path d="M8 14C8 14 10 8 14 8C18 8 20 14 20 14C20 14 18 20 14 20C10 20 8 14 8 14Z" stroke="currentColor" stroke-width="1.5"/>
-                    <line x1="2" y1="14" x2="26" y2="14" stroke="currentColor" stroke-width="1"/>
-                    <ellipse cx="14" cy="14" rx="4" ry="12" stroke="currentColor" stroke-width="1"/>
-                </svg>
-            </span>
-            <span>TechDiffusion</span>
-        </a>
+        <a href="#" class="nav-logo">HHeuristics</a>
         <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
             <span></span><span></span><span></span>
         </button>
@@ -43,29 +33,31 @@
 
 <!-- Hero Section -->
 <header class="hero">
-    <div class="hero-bg">
-        <div class="grid-overlay"></div>
-        <div class="floating-nodes" id="floatingNodes"></div>
-    </div>
     <div class="hero-content">
-        <div class="hero-badge">Research Briefing</div>
-        <h1>Technology Diffusion in<br><span class="gradient-text">Emerging Economies</span></h1>
-        <p class="hero-subtitle">How innovations propagate across developing nations — the forces that accelerate adoption, the barriers that impede it, and the policies that shape outcomes for 6.8 billion people.</p>
+        <div class="hero-meta">
+            <span class="hero-badge">Research Briefing</span>
+            <span class="hero-date">June 2025</span>
+        </div>
+        <h1>Technology Diffusion in<br>Emerging Economies</h1>
+        <div class="hero-rule"></div>
+        <p class="hero-subtitle">How innovations propagate across developing nations&thinsp;&mdash;&thinsp;the forces that accelerate adoption, the barriers that impede it, and the policies that shape outcomes for 6.8 billion people.</p>
         <div class="hero-stats">
             <div class="stat-item">
                 <span class="stat-number" data-target="85">0</span><span class="stat-suffix">%</span>
                 <span class="stat-label">of world population in emerging &amp; developing economies</span>
             </div>
+            <div class="stat-divider"></div>
             <div class="stat-item">
                 <span class="stat-number" data-target="4.6">0</span><span class="stat-suffix">B</span>
                 <span class="stat-label">new internet users gained since 2005 in developing regions</span>
             </div>
+            <div class="stat-divider"></div>
             <div class="stat-item">
                 <span class="stat-number" data-target="73">0</span><span class="stat-suffix">%</span>
                 <span class="stat-label">mobile penetration rate across Sub-Saharan Africa in 2025</span>
             </div>
         </div>
-        <a href="#framework" class="hero-cta">Explore the Analysis <span>&darr;</span></a>
+        <a href="#framework" class="hero-cta">Explore the Analysis &darr;</a>
     </div>
 </header>
 
@@ -74,17 +66,18 @@
     <div class="container">
         <div class="intro-grid">
             <div class="intro-text">
-                <span class="section-tag">Overview</span>
+                <span class="section-tag">I. Overview</span>
                 <h2>Understanding Technology Diffusion</h2>
                 <p>Technology diffusion refers to the process by which innovations spread across populations, markets, and geographies over time. In emerging economies, this process is shaped by unique dynamics: leapfrogging legacy infrastructure, adapting technologies to local contexts, and navigating resource constraints that don't exist in developed markets.</p>
-                <p>Unlike the linear adoption patterns theorized by Everett Rogers in 1962, technology diffusion in emerging economies often follows <strong>non-linear, discontinuous paths</strong> — driven by mobile-first paradigms, informal economies, and policy interventions that can rapidly accelerate or impede adoption.</p>
-                <p>Understanding these dynamics is critical. By 2030, emerging economies will account for over <strong>60% of global GDP</strong> (PPP), and the technologies they adopt — or fail to adopt — will reshape global supply chains, climate trajectories, and geopolitical power structures.</p>
+                <p>Unlike the linear adoption patterns theorized by Everett Rogers in 1962, technology diffusion in emerging economies often follows <strong>non-linear, discontinuous paths</strong> &mdash; driven by mobile-first paradigms, informal economies, and policy interventions that can rapidly accelerate or impede adoption.</p>
+                <p>Understanding these dynamics is critical. By 2030, emerging economies will account for over <strong>60% of global GDP</strong> (PPP), and the technologies they adopt &mdash; or fail to adopt &mdash; will reshape global supply chains, climate trajectories, and geopolitical power structures.</p>
             </div>
             <div class="intro-visual">
-                <div class="diffusion-curve-container">
+                <div class="figure-container">
+                    <span class="figure-label">Figure 1</span>
                     <canvas id="diffusionCurveChart"></canvas>
+                    <p class="figure-caption">Rogers' S-Curve vs. observed adoption patterns in emerging markets, showing characteristic "leapfrog" acceleration phases.</p>
                 </div>
-                <p class="chart-caption">Rogers' S-Curve vs. observed adoption patterns in emerging markets, showing characteristic "leapfrog" acceleration phases.</p>
             </div>
         </div>
     </div>
@@ -94,17 +87,15 @@
 <section class="section framework-section" id="framework">
     <div class="container">
         <div class="section-header">
-            <span class="section-tag">Analytical Framework</span>
+            <span class="section-tag">II. Analytical Framework</span>
             <h2>The Diffusion Ecosystem</h2>
             <p>Technology diffusion in emerging economies operates across four interconnected layers. Disruption at any layer cascades through the system.</p>
         </div>
         <div class="framework-grid">
             <div class="framework-card" data-layer="1">
-                <div class="card-icon">
-                    <svg viewBox="0 0 48 48" fill="none"><circle cx="24" cy="24" r="20" stroke="currentColor" stroke-width="2"/><path d="M24 12v12l8 8" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
-                </div>
+                <div class="card-number">1</div>
                 <h3>Infrastructure Layer</h3>
-                <p>Physical and digital infrastructure — telecommunications networks, electricity grids, data centers, and transport logistics — forms the foundation upon which technology adoption occurs.</p>
+                <p>Physical and digital infrastructure &mdash; telecommunications networks, electricity grids, data centers, and transport logistics &mdash; forms the foundation upon which technology adoption occurs.</p>
                 <ul class="card-metrics">
                     <li><strong>$1.5T</strong> annual infrastructure gap in developing nations</li>
                     <li><strong>600M+</strong> people in Africa still lack electricity access</li>
@@ -112,9 +103,7 @@
                 </ul>
             </div>
             <div class="framework-card" data-layer="2">
-                <div class="card-icon">
-                    <svg viewBox="0 0 48 48" fill="none"><rect x="8" y="8" width="32" height="32" rx="4" stroke="currentColor" stroke-width="2"/><path d="M16 24h16M24 16v16" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
-                </div>
+                <div class="card-number">2</div>
                 <h3>Institutional Layer</h3>
                 <p>Regulatory frameworks, intellectual property regimes, trade policies, and governance structures determine the rules under which technology enters and scales within a market.</p>
                 <ul class="card-metrics">
@@ -124,9 +113,7 @@
                 </ul>
             </div>
             <div class="framework-card" data-layer="3">
-                <div class="card-icon">
-                    <svg viewBox="0 0 48 48" fill="none"><circle cx="18" cy="20" r="6" stroke="currentColor" stroke-width="2"/><circle cx="30" cy="20" r="6" stroke="currentColor" stroke-width="2"/><path d="M12 36c0-4 4-8 12-8s12 4 12 8" stroke="currentColor" stroke-width="2"/></svg>
-                </div>
+                <div class="card-number">3</div>
                 <h3>Human Capital Layer</h3>
                 <p>Education systems, digital literacy, technical workforce availability, and entrepreneurial culture shape a society's capacity to absorb, adapt, and innovate upon imported technologies.</p>
                 <ul class="card-metrics">
@@ -136,10 +123,8 @@
                 </ul>
             </div>
             <div class="framework-card" data-layer="4">
-                <div class="card-icon">
-                    <svg viewBox="0 0 48 48" fill="none"><path d="M24 4l6 12 13 2-9.5 9 2.5 13-12-6.5L12 40l2.5-13L5 18l13-2z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></svg>
-                </div>
-                <h3>Market & Demand Layer</h3>
+                <div class="card-number">4</div>
+                <h3>Market &amp; Demand Layer</h3>
                 <p>Consumer purchasing power, market size, competitive dynamics, and demand characteristics determine commercial viability and the pace at which technologies scale beyond early adopters.</p>
                 <ul class="card-metrics">
                     <li><strong>$30T</strong> emerging-market consumer spending projected by 2030</li>
@@ -155,15 +140,15 @@
 <section class="section drivers-section" id="drivers">
     <div class="container">
         <div class="section-header">
-            <span class="section-tag">Accelerants</span>
-            <h2>Key Drivers of Technology Diffusion</h2>
+            <span class="section-tag">III. Key Drivers</span>
+            <h2>Forces Accelerating Technology Diffusion</h2>
             <p>Several interconnected forces accelerate the spread of technology in emerging markets.</p>
         </div>
         <div class="drivers-grid">
             <div class="driver-item">
                 <div class="driver-number">01</div>
                 <h3>Mobile-First Leapfrogging</h3>
-                <p>Emerging economies routinely bypass legacy infrastructure stages. Sub-Saharan Africa skipped fixed-line telephony entirely; Southeast Asia leapfrogged branch banking via mobile payments. This pattern — skipping the intermediate technology generation — compresses decades of diffusion into years.</p>
+                <p>Emerging economies routinely bypass legacy infrastructure stages. Sub-Saharan Africa skipped fixed-line telephony entirely; Southeast Asia leapfrogged branch banking via mobile payments. This pattern &mdash; skipping the intermediate technology generation &mdash; compresses decades of diffusion into years.</p>
                 <div class="driver-example">
                     <strong>Example:</strong> M-Pesa launched in Kenya in 2007. By 2024, mobile money processes over $1 trillion annually across Africa, serving populations that never had traditional bank accounts.
                 </div>
@@ -178,7 +163,7 @@
             </div>
             <div class="driver-item">
                 <div class="driver-number">03</div>
-                <h3>FDI & Technology Transfer</h3>
+                <h3>FDI &amp; Technology Transfer</h3>
                 <p>Foreign direct investment remains a primary channel for technology transfer, particularly in manufacturing. When multinationals establish operations in emerging economies, they bring process technologies, management practices, and supply chain standards that diffuse into local ecosystems via labor mobility and supplier relationships.</p>
                 <div class="driver-example">
                     <strong>Example:</strong> Vietnam's electronics manufacturing sector grew from near-zero to $100B+ in exports over 15 years, driven by Samsung, Intel, and Foxconn investments that created dense supplier ecosystems.
@@ -186,10 +171,10 @@
             </div>
             <div class="driver-item">
                 <div class="driver-number">04</div>
-                <h3>Open-Source & Low-Cost Access</h3>
-                <p>Open-source software, cloud computing, and affordable hardware have dramatically reduced the cost of technology adoption. A developer in Accra has access to the same AI models, development tools, and cloud infrastructure as one in San Francisco — at marginal cost approaching zero.</p>
+                <h3>Open-Source &amp; Low-Cost Access</h3>
+                <p>Open-source software, cloud computing, and affordable hardware have dramatically reduced the cost of technology adoption. A developer in Accra has access to the same AI models, development tools, and cloud infrastructure as one in San Francisco &mdash; at marginal cost approaching zero.</p>
                 <div class="driver-example">
-                    <strong>Example:</strong> India's Aadhaar biometric ID system — the world's largest — was built substantially on open-source technologies, enabling digital identity for 1.4 billion people at a cost of roughly $1 per enrollment.
+                    <strong>Example:</strong> India's Aadhaar biometric ID system &mdash; the world's largest &mdash; was built substantially on open-source technologies, enabling digital identity for 1.4 billion people at a cost of roughly $1 per enrollment.
                 </div>
             </div>
             <div class="driver-item">
@@ -197,13 +182,13 @@
                 <h3>South-South Technology Corridors</h3>
                 <p>Technology increasingly flows between emerging economies rather than exclusively from developed to developing nations. China's tech ecosystem exports to Africa, Indian IT services power Middle Eastern digitization, and Brazilian agritech spreads across Latin America. These corridors often deliver more contextually appropriate solutions than North-South transfers.</p>
                 <div class="driver-example">
-                    <strong>Example:</strong> Chinese firms like Transsion (Tecno, Itel brands) captured over 50% of Africa's smartphone market by designing specifically for African consumers — dual-SIM, long battery life, and cameras optimized for darker skin tones.
+                    <strong>Example:</strong> Chinese firms like Transsion (Tecno, Itel brands) captured over 50% of Africa's smartphone market by designing specifically for African consumers &mdash; dual-SIM, long battery life, and cameras optimized for darker skin tones.
                 </div>
             </div>
             <div class="driver-item">
                 <div class="driver-number">06</div>
                 <h3>Government Digital Public Infrastructure</h3>
-                <p>National-scale digital public goods — identity systems, payment rails, data exchanges — create platforms upon which private innovation can scale rapidly. India's "India Stack" (Aadhaar + UPI + DigiLocker) is the most cited model, now being replicated across dozens of nations.</p>
+                <p>National-scale digital public goods &mdash; identity systems, payment rails, data exchanges &mdash; create platforms upon which private innovation can scale rapidly. India's "India Stack" (Aadhaar + UPI + DigiLocker) is the most cited model, now being replicated across dozens of nations.</p>
                 <div class="driver-example">
                     <strong>Example:</strong> UPI (Unified Payments Interface) processed 14+ billion transactions monthly by early 2025, making India's digital payments volume comparable to the combined card transaction volumes of many developed nations.
                 </div>
@@ -216,25 +201,27 @@
 <section class="section barriers-section" id="barriers">
     <div class="container">
         <div class="section-header">
-            <span class="section-tag">Impediments</span>
-            <h2>Barriers to Adoption</h2>
-            <p>Despite accelerating adoption, significant structural barriers persist — creating uneven diffusion landscapes within and across emerging economies.</p>
+            <span class="section-tag">IV. Barriers to Adoption</span>
+            <h2>Structural Impediments</h2>
+            <p>Despite accelerating adoption, significant structural barriers persist &mdash; creating uneven diffusion landscapes within and across emerging economies.</p>
         </div>
         <div class="barriers-visual">
-            <div class="barrier-chart-container">
+            <div class="figure-container">
+                <span class="figure-label">Figure 2</span>
                 <canvas id="barriersChart"></canvas>
+                <p class="figure-caption">Composite severity impact scores for major barriers to technology adoption in emerging economies. Scores derived from World Bank Enterprise Surveys, ITU data, and expert assessment.</p>
             </div>
         </div>
         <div class="barriers-grid">
             <div class="barrier-card critical">
                 <div class="barrier-severity">Critical</div>
-                <h3>Digital Divide & Connectivity Gaps</h3>
-                <p>2.6 billion people remain offline globally, overwhelmingly concentrated in emerging economies. Even where coverage exists, quality varies enormously — median mobile broadband speeds in Sub-Saharan Africa are ~15 Mbps versus 75+ Mbps in advanced economies. Urban-rural divides within countries often exceed differences between nations.</p>
+                <h3>Digital Divide &amp; Connectivity Gaps</h3>
+                <p>2.6 billion people remain offline globally, overwhelmingly concentrated in emerging economies. Even where coverage exists, quality varies enormously &mdash; median mobile broadband speeds in Sub-Saharan Africa are ~15 Mbps versus 75+ Mbps in advanced economies. Urban-rural divides within countries often exceed differences between nations.</p>
             </div>
             <div class="barrier-card critical">
                 <div class="barrier-severity">Critical</div>
                 <h3>Affordability Constraints</h3>
-                <p>Device and data costs relative to income remain prohibitive for billions. In low-income countries, 1GB of mobile data can cost 10-20% of average monthly income (ITU threshold: 2%). A basic smartphone at $50 represents a month's wages for the bottom 40% in many African economies.</p>
+                <p>Device and data costs relative to income remain prohibitive for billions. In low-income countries, 1GB of mobile data can cost 10&ndash;20% of average monthly income (ITU threshold: 2%). A basic smartphone at $50 represents a month's wages for the bottom 40% in many African economies.</p>
             </div>
             <div class="barrier-card high">
                 <div class="barrier-severity">High</div>
@@ -243,17 +230,17 @@
             </div>
             <div class="barrier-card high">
                 <div class="barrier-severity">High</div>
-                <h3>Skill Gaps & Brain Drain</h3>
-                <p>While STEM enrollment grows, quality and relevance lag. Over 60% of African graduates require significant retraining for technology roles (IFC). Compounding this, brain drain siphons top talent — Nigeria alone lost an estimated 16,000 doctors and tens of thousands of tech workers between 2016-2022.</p>
+                <h3>Skill Gaps &amp; Brain Drain</h3>
+                <p>While STEM enrollment grows, quality and relevance lag. Over 60% of African graduates require significant retraining for technology roles (IFC). Compounding this, brain drain siphons top talent &mdash; Nigeria alone lost an estimated 16,000 doctors and tens of thousands of tech workers between 2016&ndash;2022.</p>
             </div>
             <div class="barrier-card medium">
                 <div class="barrier-severity">Medium</div>
                 <h3>Financing Gaps</h3>
-                <p>The SME financing gap in emerging markets exceeds $5 trillion. Technology adoption requires capital investment, and firms in developing economies face borrowing costs 3-5x higher than developed-market peers. Venture capital, while growing, remains concentrated in a handful of hub cities.</p>
+                <p>The SME financing gap in emerging markets exceeds $5 trillion. Technology adoption requires capital investment, and firms in developing economies face borrowing costs 3&ndash;5x higher than developed-market peers. Venture capital, while growing, remains concentrated in a handful of hub cities.</p>
             </div>
             <div class="barrier-card medium">
                 <div class="barrier-severity">Medium</div>
-                <h3>Language & Localization</h3>
+                <h3>Language &amp; Localization</h3>
                 <p>Over 80% of internet content is in just 10 languages. For the 3,000+ languages spoken across emerging economies, technology often arrives in forms that are linguistically and culturally inaccessible. Voice interfaces and AI translation are beginning to address this, but adoption of these solutions is itself uneven.</p>
             </div>
         </div>
@@ -264,19 +251,21 @@
 <section class="section regional-section" id="regional">
     <div class="container">
         <div class="section-header">
-            <span class="section-tag">Regional Analysis</span>
+            <span class="section-tag">V. Regional Analysis</span>
             <h2>Diffusion Patterns by Region</h2>
             <p>Technology adoption varies dramatically by region, shaped by distinct infrastructure, institutional, and demographic contexts.</p>
         </div>
         <div class="regional-charts">
-            <div class="chart-panel">
-                <h3>Internet Penetration by Region (2015 vs. 2025)</h3>
+            <div class="figure-container">
+                <span class="figure-label">Figure 3</span>
+                <h4>Internet Penetration by Region (2015 vs. 2025)</h4>
                 <div class="chart-wrapper">
                     <canvas id="internetPenetrationChart"></canvas>
                 </div>
             </div>
-            <div class="chart-panel">
-                <h3>Technology Readiness Index — Emerging Economies (2025)</h3>
+            <div class="figure-container">
+                <span class="figure-label">Figure 4</span>
+                <h4>Technology Readiness Index &mdash; Emerging Economies (2025)</h4>
                 <div class="chart-wrapper">
                     <canvas id="techReadinessChart"></canvas>
                 </div>
@@ -284,12 +273,12 @@
         </div>
         <div class="regional-profiles">
             <div class="region-card">
-                <div class="region-header" style="--region-color: #f97316;">
+                <div class="region-header">
                     <h3>Sub-Saharan Africa</h3>
                     <span class="region-tag">Leapfrog Frontier</span>
                 </div>
                 <div class="region-body">
-                    <p>Africa exemplifies leapfrog adoption: mobile money, off-grid solar, and drone delivery reached scale before many legacy alternatives. Mobile penetration hit 73% by 2025, yet internet penetration lags at ~40% — creating a "mobile-rich, internet-poor" paradox. The continent's 1.4 billion people represent the world's largest untapped technology market.</p>
+                    <p>Africa exemplifies leapfrog adoption: mobile money, off-grid solar, and drone delivery reached scale before many legacy alternatives. Mobile penetration hit 73% by 2025, yet internet penetration lags at ~40% &mdash; creating a "mobile-rich, internet-poor" paradox. The continent's 1.4 billion people represent the world's largest untapped technology market.</p>
                     <div class="region-metrics">
                         <div><strong>$5.6B</strong> VC funding (2022 peak)</div>
                         <div><strong>800+</strong> active tech hubs</div>
@@ -298,8 +287,8 @@
                 </div>
             </div>
             <div class="region-card">
-                <div class="region-header" style="--region-color: #06b6d4;">
-                    <h3>South & Southeast Asia</h3>
+                <div class="region-header">
+                    <h3>South &amp; Southeast Asia</h3>
                     <span class="region-tag">Scale Powerhouse</span>
                 </div>
                 <div class="region-body">
@@ -312,8 +301,8 @@
                 </div>
             </div>
             <div class="region-card">
-                <div class="region-header" style="--region-color: #8b5cf6;">
-                    <h3>Latin America & Caribbean</h3>
+                <div class="region-header">
+                    <h3>Latin America &amp; Caribbean</h3>
                     <span class="region-tag">Fintech Leader</span>
                 </div>
                 <div class="region-body">
@@ -326,8 +315,8 @@
                 </div>
             </div>
             <div class="region-card">
-                <div class="region-header" style="--region-color: #10b981;">
-                    <h3>Middle East & North Africa</h3>
+                <div class="region-header">
+                    <h3>Middle East &amp; North Africa</h3>
                     <span class="region-tag">State-Driven Modernizer</span>
                 </div>
                 <div class="region-body">
@@ -347,9 +336,9 @@
 <section class="section casestudies-section" id="case-studies">
     <div class="container">
         <div class="section-header">
-            <span class="section-tag">Case Studies</span>
+            <span class="section-tag">VI. Case Studies</span>
             <h2>Diffusion in Practice</h2>
-            <p>Examining specific technology trajectories reveals the mechanisms through which diffusion succeeds — or stalls.</p>
+            <p>Examining specific technology trajectories reveals the mechanisms through which diffusion succeeds &mdash; or stalls.</p>
         </div>
         <div class="case-studies-grid">
             <article class="case-study">
@@ -378,7 +367,7 @@
                         </div>
                     </div>
                     <div class="case-insight">
-                        <strong>Key Insight:</strong> M-Pesa's success was not purely technological — it required a permissive regulatory environment (Central Bank of Kenya allowed non-bank providers), an existing agent distribution network (leveraging Safaricom's airtime resellers), and a genuine market gap (85% unbanked at launch). Attempts to replicate in markets missing any of these three pillars consistently underperformed.
+                        <strong>Key Insight:</strong> M-Pesa's success was not purely technological &mdash; it required a permissive regulatory environment (Central Bank of Kenya allowed non-bank providers), an existing agent distribution network (leveraging Safaricom's airtime resellers), and a genuine market gap (85% unbanked at launch). Attempts to replicate in markets missing any of these three pillars consistently underperformed.
                     </div>
                 </div>
             </article>
@@ -408,7 +397,7 @@
                         </div>
                     </div>
                     <div class="case-insight">
-                        <strong>Key Insight:</strong> India Stack demonstrates how government-built digital public infrastructure can create a "platform effect" — once identity and payments rails are universal, private sector innovation (fintech, healthtech, edtech) can build on top at marginal cost. The model's replicability depends on state capacity and trust in government digital systems, which varies enormously across contexts.
+                        <strong>Key Insight:</strong> India Stack demonstrates how government-built digital public infrastructure can create a "platform effect" &mdash; once identity and payments rails are universal, private sector innovation (fintech, healthtech, edtech) can build on top at marginal cost. The model's replicability depends on state capacity and trust in government digital systems, which varies enormously across contexts.
                     </div>
                 </div>
             </article>
@@ -450,15 +439,12 @@
 <section class="section emerging-tech-section" id="emerging-tech">
     <div class="container">
         <div class="section-header">
-            <span class="section-tag">Frontier Technologies</span>
+            <span class="section-tag">VII. Frontier Technologies</span>
             <h2>AI, Blockchain, and the Next Wave</h2>
             <p>Frontier technologies present both amplified opportunities and amplified risks for emerging economies.</p>
         </div>
         <div class="emerging-grid">
             <div class="emerging-card">
-                <div class="emerging-icon">
-                    <svg viewBox="0 0 48 48" fill="none"><path d="M24 4v8M24 36v8M4 24h8M36 24h8M10.3 10.3l5.7 5.7M32 32l5.7 5.7M10.3 37.7l5.7-5.7M32 16l5.7-5.7" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><circle cx="24" cy="24" r="8" stroke="currentColor" stroke-width="2"/></svg>
-                </div>
                 <h3>Artificial Intelligence</h3>
                 <p>AI adoption in emerging economies is bifurcating: a handful of nations (China, India, UAE, Brazil) are building domestic AI capabilities, while most remain consumers of models built elsewhere. Key applications include agricultural yield prediction, medical diagnostics in provider-scarce regions, and fraud detection in digital financial services.</p>
                 <div class="tech-risk-opportunity">
@@ -471,11 +457,8 @@
                 </div>
             </div>
             <div class="emerging-card">
-                <div class="emerging-icon">
-                    <svg viewBox="0 0 48 48" fill="none"><rect x="6" y="6" width="12" height="12" rx="2" stroke="currentColor" stroke-width="2"/><rect x="18" y="18" width="12" height="12" rx="2" stroke="currentColor" stroke-width="2"/><rect x="30" y="6" width="12" height="12" rx="2" stroke="currentColor" stroke-width="2"/><rect x="6" y="30" width="12" height="12" rx="2" stroke="currentColor" stroke-width="2"/><rect x="30" y="30" width="12" height="12" rx="2" stroke="currentColor" stroke-width="2"/><path d="M18 12h12M12 18v12M36 18v12M18 36h12" stroke="currentColor" stroke-width="1.5"/></svg>
-                </div>
-                <h3>Blockchain & Digital Currencies</h3>
-                <p>Emerging economies lead global crypto adoption — 12 of the top 20 countries by grassroots crypto use are developing nations (Chainalysis). Central Bank Digital Currencies (CBDCs) are being piloted in Nigeria (eNaira), the Bahamas (Sand Dollar), and Jamaica (JAM-DEX), with India and Brazil in advanced testing.</p>
+                <h3>Blockchain &amp; Digital Currencies</h3>
+                <p>Emerging economies lead global crypto adoption &mdash; 12 of the top 20 countries by grassroots crypto use are developing nations (Chainalysis). Central Bank Digital Currencies (CBDCs) are being piloted in Nigeria (eNaira), the Bahamas (Sand Dollar), and Jamaica (JAM-DEX), with India and Brazil in advanced testing.</p>
                 <div class="tech-risk-opportunity">
                     <div class="opportunity">
                         <strong>Opportunity:</strong> Remittance costs (averaging 6.2% for Sub-Saharan Africa) could drop below 1% via blockchain rails. CBDCs may extend financial inclusion to the last mile.
@@ -486,10 +469,7 @@
                 </div>
             </div>
             <div class="emerging-card">
-                <div class="emerging-icon">
-                    <svg viewBox="0 0 48 48" fill="none"><path d="M24 4C13 4 4 13 4 24s9 20 20 20 20-9 20-20S35 4 24 4z" stroke="currentColor" stroke-width="2"/><path d="M4 24h40M24 4c5 5 8 12 8 20s-3 15-8 20c-5-5-8-12-8-20s3-15 8-20z" stroke="currentColor" stroke-width="2"/></svg>
-                </div>
-                <h3>Green Technology & Climate Tech</h3>
+                <h3>Green Technology &amp; Climate Tech</h3>
                 <p>Emerging economies are both the most vulnerable to climate change and the fastest-growing markets for clean energy technology. Solar installations in India grew 30x from 2014 to 2024. Electric two-wheelers are transforming urban transport across Vietnam and India. Brazil's ethanol-flex-fuel ecosystem remains a global model for bioenergy transition.</p>
                 <div class="tech-risk-opportunity">
                     <div class="opportunity">
@@ -508,7 +488,7 @@
 <section class="section policy-section" id="policy">
     <div class="container">
         <div class="section-header">
-            <span class="section-tag">Policy Implications</span>
+            <span class="section-tag">VIII. Policy Implications</span>
             <h2>Shaping Equitable Diffusion</h2>
             <p>Policy choices made today will determine whether technology diffusion narrows or widens global inequality.</p>
         </div>
@@ -518,7 +498,7 @@
                     <span class="pillar-number">I</span>
                     <h3>Build Digital Public Infrastructure</h3>
                 </div>
-                <p>Governments should invest in shared digital rails — identity, payments, data exchange — as public goods rather than leaving them to proprietary platforms. India Stack demonstrates that public digital infrastructure can catalyze private innovation at scale while maintaining sovereign control.</p>
+                <p>Governments should invest in shared digital rails &mdash; identity, payments, data exchange &mdash; as public goods rather than leaving them to proprietary platforms. India Stack demonstrates that public digital infrastructure can catalyze private innovation at scale while maintaining sovereign control.</p>
                 <ul class="policy-actions">
                     <li>Adopt modular, open-standard DPI frameworks (e.g., MOSIP for identity)</li>
                     <li>Ensure interoperability between mobile money, banking, and government systems</li>
@@ -530,7 +510,7 @@
                     <span class="pillar-number">II</span>
                     <h3>Design Adaptive Regulation</h3>
                 </div>
-                <p>Static regulatory frameworks cannot keep pace with technology cycles. Regulatory sandboxes — tested successfully in Kenya (fintech), Rwanda (drones), and Brazil (open banking) — allow controlled experimentation while managing risk. Regional regulatory harmonization can expand addressable markets.</p>
+                <p>Static regulatory frameworks cannot keep pace with technology cycles. Regulatory sandboxes &mdash; tested successfully in Kenya (fintech), Rwanda (drones), and Brazil (open banking) &mdash; allow controlled experimentation while managing risk. Regional regulatory harmonization can expand addressable markets.</p>
                 <ul class="policy-actions">
                     <li>Establish technology-neutral regulatory sandboxes with clear graduation criteria</li>
                     <li>Pursue regional regulatory harmonization (e.g., African Continental Free Trade Area digital protocols)</li>
@@ -569,7 +549,7 @@
 <section class="section dashboard-section" id="dashboard">
     <div class="container">
         <div class="section-header">
-            <span class="section-tag">Data Dashboard</span>
+            <span class="section-tag">IX. Key Indicators</span>
             <h2>Diffusion at a Glance</h2>
             <p>Key metrics tracking technology adoption across the developing world.</p>
         </div>
@@ -606,7 +586,7 @@
             </div>
             <div class="dash-card">
                 <h4>AI Readiness Gap</h4>
-                <div class="dash-number">3.4x</div>
+                <div class="dash-number">3.4&times;</div>
                 <div class="dash-detail">Difference in AI readiness between top and bottom quartile nations</div>
                 <div class="dash-trend down">Widening</div>
             </div>
@@ -619,9 +599,9 @@
     <div class="container">
         <div class="conclusion-content">
             <h2>The Stakes Are Global</h2>
-            <p>Technology diffusion in emerging economies is not a niche development topic — it is the central economic and geopolitical question of the coming decades. Whether 6.8 billion people gain meaningful access to AI, clean energy, digital finance, and precision agriculture will determine global trajectories on climate, inequality, migration, and stability.</p>
+            <p>Technology diffusion in emerging economies is not a niche development topic &mdash; it is the central economic and geopolitical question of the coming decades. Whether 6.8 billion people gain meaningful access to AI, clean energy, digital finance, and precision agriculture will determine global trajectories on climate, inequality, migration, and stability.</p>
             <p>The evidence shows that diffusion is neither automatic nor inevitable. It requires intentional investment in infrastructure, human capital, and institutional capacity. It demands regulatory frameworks that balance innovation with protection. And it benefits from international cooperation that avoids new forms of technological dependency.</p>
-            <p>The nations and institutions that understand these dynamics — and act on them — will shape the 21st century. The window for action is open, but it is not unlimited.</p>
+            <p>The nations and institutions that understand these dynamics &mdash; and act on them &mdash; will shape the 21st century. The window for action is open, but it is not unlimited.</p>
             <div class="conclusion-cta">
                 <a href="#framework" class="btn-primary">Review the Framework</a>
                 <a href="#regional" class="btn-secondary">Explore Regional Data</a>
@@ -633,12 +613,10 @@
 <!-- Footer -->
 <footer class="footer">
     <div class="container">
+        <div class="footer-rule"></div>
         <div class="footer-content">
             <div class="footer-left">
-                <span class="footer-logo">
-                    <svg width="20" height="20" viewBox="0 0 28 28" fill="none"><circle cx="14" cy="14" r="12" stroke="currentColor" stroke-width="1.5"/><path d="M8 14C8 14 10 8 14 8C18 8 20 14 20 14C20 14 18 20 14 20C10 20 8 14 8 14Z" stroke="currentColor" stroke-width="1.5"/><line x1="2" y1="14" x2="26" y2="14" stroke="currentColor" stroke-width="1"/><ellipse cx="14" cy="14" rx="4" ry="12" stroke="currentColor" stroke-width="1"/></svg>
-                    TechDiffusion
-                </span>
+                <span class="footer-logo">HHeuristics</span>
                 <p>A research briefing on technology adoption patterns in emerging economies.</p>
             </div>
             <div class="footer-right">
